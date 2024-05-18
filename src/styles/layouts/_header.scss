@@ -1,0 +1,43 @@
+.header {
+  & .container {
+    box-sizing: border-box;
+    height: 50px;
+    padding-left: 15px;
+    padding-right: 20px;
+    background-color: $color-dark;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-size: 14px;
+    line-height: 1.2;
+    color: $color-grey-dark;
+  }
+
+  &__btn {
+    border: none;
+    background-color: $color-red;
+    border-radius: 5px;
+    color: $color-white;
+    width: 170px;
+    height: 30px;
+  }
+
+  @include respond(tab-land) {
+    &__title {
+      font-size: 12px;
+    }
+    &__btn {
+      font-size: 14px;
+    }
+  }
+  @include respond(phone) {
+    &__btn {
+      font-size: 12px;
+      width: 140px;
+      height: 25px;
+    }
+  }
+}
